@@ -1,31 +1,31 @@
-# Create AI Agents and Agent Teams for your enterprise
+# Create Document Tool and AI Agent (RAG) using AI Agent Studio
 
-## Create Procurement Policy Advisor Tool and Agent (RAG) using AI Agent Studio
-
-### Introduction
+## Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
 
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Procurement Policy Document Tool that references your company-specific procurement policy documents (PDF)
-* Create an Agent that uses the Document Tool to respond to user questions related to procurement.
+* Create an Agent that uses the Document Tool to respond to user questions related to procurement
 
-### **Pre-requisite**
+Estimated Time: 10-15 minutes
+
+## Pre-requisite
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download following files
-1. Policy document file to your local desktop as below.
+As a pre-requisite for this adventure, please download following files to your local desktop
+1. Policy document file **(ProcurementPolicies.pdf)**
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/ProcurementPolicies.pdf)
 <br>
-2. Prompt file for the AI Agent
+2. Prompt file for the AI Agent **(Prompt-Procurement-Policy-Advisor.txt)**
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
 
-### **Begin Exercise**
+## Begin Exercise
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -115,7 +115,7 @@ As a pre-requisite for this adventure, please download following files
     <br><br>
     Alternatively, prompt text is available in **Prompt-Procurement-Policy-Advisor-Agent.txt** file that you can download to your local desktop as below.
     <br>
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
     <br>
     Once done, please open this file and copy the contents into the Prompt field. <br>
 
@@ -126,21 +126,20 @@ As a pre-requisite for this adventure, please download following files
 ```
 <copy>
 AGENT ROLE
-
-As a Procurement Policy Advisor, your role is to efficiently access and interpret company-specific procurement policy documents, providing workers with clear, actionable guidance on company procurement requirements.
+You are a Procurement Policy Advisor. Your role is to access and interpret company-specific procurement policy documents and provide workers with clear, actionable guidance on procurement requirements.
 
 RESPONSIBILITIES
 
-Your responsibilities include:
-
-Procurement Policies:
-- Clearly explain the company procurement requirements outlined in company's procurement policies.
-- Use the CA_PROCUREMENT_POLICY_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
+- Explain company procurement requirements clearly and accurately.
+- Use the AIA_PROCUREMENT_POLICY_DOCUMENT_TOOL to retrieve relevant policy details before answering procurement-policy questions.
+- Base every answer strictly on information retrieved from the policy documents.
 
 IMPORTANT GUIDELINES
-  - Provide concise, factual answers based strictly on the data retrieved.
-  - Never fabricate or assume information.
-  - Format your responses clearly and professionally for easy readability. </copy>
+
+- Provide concise, factual, and professional answers.
+- Never fabricate, infer, or assume policy information.
+- If the retrieved documents do not contain the answer, clearly state that the information is not available in the policy documents.
+- Present responses in a clear, easy-to-read format. </copy>
 ```
 
 10. You’ve now created your first Agent.  Now you’ll add Tools to the Agent.  You'll add the document tool created earlier.
@@ -176,6 +175,10 @@ IMPORTANT GUIDELINES
 
     ![Agent Created](../07a-rag-agent-prc/images/rag-agent-prc-image015.jpg) <br>
 
+16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+    > **You've completed this Adventure**. Please close this tab.
+
 ### Summary
 
 As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they do not have access to.
@@ -185,9 +188,7 @@ AI Agent Studio is a design-time environment that provides a set of tools to cre
 
 Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
 
-**You have successfully completed the Activity!**
-
-### Learn More
+## Learn More
 
 * [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
@@ -198,4 +199,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Charlie Moff; Sajid Saleem, February 2026
+* **Last Updated By/Date** - Sajid Saleem, July 2026
